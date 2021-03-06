@@ -39,7 +39,7 @@ include('includes/header.php');
             <br>
 
             <label>List Price:</label>
-            <input type="input" name="price">
+            <input type="number" name="price" min="5.00" required>
             <br>        
             
             <label>Image:</label>

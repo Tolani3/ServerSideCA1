@@ -78,7 +78,7 @@ include('includes/header.php');
 <td><?php echo $player['name']; ?></td>
 <td><?php echo $player['DateOfBirth']; ?></td>
 <td><?php echo $player['position']; ?></td>
-<td class="right"><?php echo $player['price']; ?></td>
+<td class="right"><?php echo "€". $player['price']; ?></td>
 <td><form action="delete_player.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="player_id"
