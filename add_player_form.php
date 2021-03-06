@@ -27,7 +27,7 @@ include('includes/header.php');
             </select>
             <br>
             <label>Name:</label>
-            <input type="input" name="name">
+            <input type="input" name="name" required>
             <br>
 
             <label>D.O.B:</label>
@@ -35,7 +35,7 @@ include('includes/header.php');
             <br>
 
             <label>Position:</label>
-            <input type="input" name="position">
+            <input type="input" name="position" required>
             <br>
 
             <label>List Price:</label>

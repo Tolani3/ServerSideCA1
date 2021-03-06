@@ -29,7 +29,7 @@ include('includes/header.php');
             <br>
 
             <label>Name:</label>
-            <input type="input" name="name"
+            <input type="input" name="name" required
                    value="<?php echo $players['name']; ?>">
             <br>
 
@@ -39,7 +39,7 @@ include('includes/header.php');
             <br>
 
             <label>Position:</label>
-            <input type="input" name="position"
+            <input type="input" name="position" required
                    value="<?php echo $players['position']; ?>">
             <br>
 

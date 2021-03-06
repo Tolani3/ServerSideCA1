@@ -8,4 +8,4 @@
 
 <!-- the body section -->
 <body>
-<header><h1>My PHP CRUD app</h1></header>
+<header><h1>Player Database</h1></header>
