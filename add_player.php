@@ -1,11 +1,13 @@
 <?php
-
 // Get the product data
+// echo htmlspecialchars($_SERVER["PHP_SELF"]);
+
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
 $DateOfBirth = filter_input(INPUT_POST, 'DateOfBirth');
 $position = filter_input(INPUT_POST, 'position');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+
 
 // Validate inputs
 if ($category_id == null || $category_id == false 
