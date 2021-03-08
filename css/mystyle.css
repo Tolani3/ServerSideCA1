@@ -5,12 +5,23 @@ header {
   border-bottom: 2px solid black;
 }
 
+header #header_image {
+  position: absolute;
+  top: 15px;
+  left: 470px;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../image_uploads/football2.png);
+}
+
 header h1 {
   margin: 0;
-  padding: .5em 0;
+  padding: 0.5em 0;
   color: black;
-  font-family: 'Luckiest Guy', cursive;
-  background-image: url("../image_uploads/ball.jpeg");
+  font-family: "Luckiest Guy", cursive;
 }
 
 nav ul {
@@ -34,17 +45,17 @@ body {
 
 .container {
   /* margin-top: 0; */
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   width: 1000px;
   margin: 0 auto;
   background-color: lightgray;
   border: 1px solid black;
-  padding: .5em 2em;
+  padding: 0.5em 2em;
 }
 
 section {
   float: left;
-  width: 800PX;
+  width: 800px;
   padding-bottom: 1.5em;
 }
 
@@ -72,9 +83,10 @@ table {
   border-collapse: collapse;
 }
 
-table td, table th {
+table td,
+table th {
   border: 1px solid black;
-  padding: .2em .5em .2em .5em;
+  padding: 0.2em 0.5em 0.2em 0.5em;
   vertical-align: top;
   text-align: left;
 }
@@ -101,13 +113,13 @@ br {
 }
 
 #add_player_form {
-  margin: .5em 0 1em;
+  margin: 0.5em 0 1em;
 }
 
 #add_player_form label {
   width: 6em;
   padding-right: 1em;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
   float: left;
 }
 

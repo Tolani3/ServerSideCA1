@@ -8,4 +8,7 @@
 
 <!-- the body section -->
 <body>
-<header><h1>Player Database</h1></header>
+<header>
+    <img src="image_uploads/football2.png" id="header_image">
+    <h1>Player Database</h1>
+</header>
