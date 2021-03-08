@@ -24,3 +24,6 @@ This Github repository is home to a PHP Crud application.
 
 ### Contact
 If you find any bugs or issues please by all means, email me on: d00230487@student.dkit.ie. If you have any questions or queries relating to this project please feel free to conatct me on the email provide above. Recommendations and constructive critism welcomed also.
+
+/*  https://mysql04.comp.dkit.ie/D00230487/ServerSideCA1/?category_id=1
+    https://github.com/Tolani3/ServerSideCA1.git                            */

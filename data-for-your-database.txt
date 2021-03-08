@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2021 at 12:26 AM
+-- Generation Time: Mar 08, 2021 at 08:17 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.26
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `player_shopca1`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE `categories` (
+  `categoryID` int(11) NOT NULL,
+  `categoryName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
+(1, 'Attackers'),
+(2, 'Midfielders'),
+(3, 'Defenders'),
+(4, 'Goalkeepers');
 
 -- --------------------------------------------------------
 
@@ -45,12 +67,12 @@ CREATE TABLE `players` (
 INSERT INTO `players` (`playerID`, `categoryID`, `name`, `DateOfBirth`, `position`, `price`, `image`) VALUES
 (14, 4, 'Manuel Peter Neuer', '1986-03-27', 'Sweeper Keeper', '70.00', '907338.jpg'),
 (34, 1, 'Lionel Andrés Messi', '1987-06-24', 'Right Winger', '100.00', '176418.jpg'),
-(35, 1, 'Cristiano Ronaldo dos Santos Aveiro', '1985-06-05', 'Striker', '100.00', '703126.jpg'),
-(38, 1, 'Olivier Jonathan Giroud', '1986-09-30', 'Centre Forward', '50.00', '771225.jpg'),
+(35, 1, 'Cristiano Ronaldo', '1985-06-05', 'Striker', '100.00', '703126.jpg'),
+(38, 1, 'Olivier Jonathan Giroud', '1986-09-30', 'Centre Forward', '5.00', '771225.jpg'),
 (39, 1, 'Sadio Mané', '1992-04-10', 'Left Winger', '90.00', '383216.jpg'),
-(40, 2, 'Paul Labile Pogba', '1993-03-15', 'Centre Midfielder', '85.00', '511122.jpg'),
-(41, 2, 'James Daniel Maddison', '1996-09-23', 'Attacking Midfielder', '55.00', '891005.jpg'),
-(42, 2, 'Joshua Walter Kimmich', '1995-02-08', 'Defensive Midfielder', '75.00', '949709.jpg'),
+(40, 2, 'Paul Labile Pogb', '1993-03-15', 'Centre Midfielder', '85.00', '511122.jpg'),
+(41, 2, 'James Maddison', '1996-09-23', 'Attacking Midfielder', '55.00', '891005.jpg'),
+(42, 2, 'Joshua Kimmich', '1995-02-08', 'Defensive Midfielder', '75.00', '949709.jpg'),
 (43, 2, 'Thomas Teye Partey', '1993-06-13', 'Defensive Midfielder', '60.00', '478353.jpg'),
 (45, 2, 'Toni Kroos', '1990-01-04', 'Centre Midfielder', '55.00', '87300.jpg'),
 (46, 3, 'Alphonso Boyle Davies', '2000-09-02', 'Left Back', '65.00', '859011.jpg'),
@@ -79,7 +101,7 @@ ALTER TABLE `players`
 -- AUTO_INCREMENT for table `players`
 --
 ALTER TABLE `players`
-  MODIFY `playerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `playerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
