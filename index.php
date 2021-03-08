@@ -3,11 +3,14 @@ require_once('database.php');
 
 // Get category ID
 if (!isset($category_id)) {
-$category_id = filter_input(INPUT_GET, 'category_id', 
-FILTER_VALIDATE_INT);
-if ($category_id == NULL || $category_id == FALSE) {
-$category_id = 1;
-}
+    $category_id = filter_input(
+        INPUT_GET,
+        'category_id',
+        FILTER_VALIDATE_INT
+    );
+    if ($category_id == NULL || $category_id == FALSE) {
+        $category_id = 1;
+    }
 }
 
 // Get name for current category
@@ -39,70 +42,68 @@ $players = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
 <div class="container">
-<?php
-include('includes/header.php');
-?>
-<h1>Player List</h1>
+    <?php
+    include('includes/header.php');
+    ?>
+    <h1>Player List</h1>
 
-<aside>
-<!-- display a list of categories -->
-<h2>Categories</h2>
-<nav>
-<ul>
-<?php foreach ($categories as $category) : ?>
-<li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-<?php echo $category['categoryName']; ?>
-</a>
-</li>
-<?php endforeach; ?>
-</ul>
-</nav>          
-</aside>
+    <aside>
+        <!-- display a list of categories -->
+        <h2>Categories</h2>
+        <nav>
+            <ul>
+                <?php foreach ($categories as $category) : ?>
+                    <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
+                            <?php echo $category['categoryName']; ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </nav>
+    </aside>
 
-<section>
-<!-- display a table of players -->
-<h2><?php echo $category_name; ?></h2>
-<table>
-<tr>
-<th>Image</th>
-<th>Name</th>
-<th>D.O.B</th>
-<th>Position</th>
-<th>Price</th>
-<th>Delete</th>
-<th>Edit</th>
-</tr>
-<?php foreach ($players as $player) : ?>
-<tr>
-<td><img src="image_uploads/<?php echo $player['image']; ?>" width="100px" height="100px" /></td>
-<td><?php echo $player['name']; ?></td>
-<td><?php echo $player['DateOfBirth']; ?></td>
-<td><?php echo $player['position']; ?></td>
-<td class="right"><?php echo "€". $player['price']; ?></td>
-<td><form action="delete_player.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="player_id"
-value="<?php echo $player['playerID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $player['categoryID']; ?>">
-<input type="submit" value="Delete">
-</form></td>
-<td><form action="edit_player_form.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="player_id"
-value="<?php echo $player['playerID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $player['categoryID']; ?>">
-<input type="submit" value="Edit">
-</form></td>
-</tr>
-<?php endforeach; ?>
-</table>
-<p><a href="add_player_form.php">Add Record</a></p>
-<p><a href="category_list.php">Manage Categories</a></p>
-</section>
+    <section>
+        <!-- display a table of players -->
+        <h2><?php echo $category_name; ?></h2>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>D.O.B</th>
+                <th>Position</th>
+                <th>Price</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+            <?php foreach ($players as $player) : ?>
+                <tr>
+                    <td><img src="image_uploads/<?php echo $player['image']; ?>" width="100px" height="100px" /></td>
+                    <td><?php echo $player['name']; ?></td>
+                    <td><?php echo $player['DateOfBirth']; ?></td>
+                    <td><?php echo $player['position']; ?></td>
+                    <td class="right"><?php echo "€" . $player['price']; ?></td>
+                    <td>
+                        <form action="delete_player.php" method="post" id="delete_record_form">
+                            <input type="hidden" name="player_id" value="<?php echo $player['playerID']; ?>">
+                            <input type="hidden" name="category_id" value="<?php echo $player['categoryID']; ?>">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="edit_player_form.php" method="post" id="delete_record_form">
+                            <input type="hidden" name="player_id" value="<?php echo $player['playerID']; ?>">
+                            <input type="hidden" name="category_id" value="<?php echo $player['categoryID']; ?>">
+                            <input type="submit" value="Edit">
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+        <p><a href="add_player_form.php">Add Record</a></p>
+        <p><a href="category_list.php">Manage Categories</a></p>
+    </section>
 
 
-<?php
-include('includes/footer.php');
-?>
+    <?php
+    include('includes/footer.php');
+    ?>
