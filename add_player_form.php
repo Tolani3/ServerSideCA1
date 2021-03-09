@@ -32,7 +32,7 @@ include('includes/header.php');
             <br>
 
             <label>D.O.B:</label>
-            <input type="date" name="DateOfBirth" min="1971-01-01" max="2021-03-15">
+            <input type="date" name="DateOfBirth" min="1971-01-01" max="2021-03-15" required>
             <br>
 
             <label>Position:</label>
