@@ -3,12 +3,13 @@
 </footer>
 </div><!-- close div container -->
 
-<script language="JavaScript">
+<!-- <script language="JavaScript">
     var frmvalidator = new Validator("contactform");
     frmvalidator.addValidation("name", "req", "Please provide your name");
     frmvalidator.addValidation("email", "req", "Please provide your email");
+    frmvalidator.addValidation("phoneNumber", "req", "Please provide your phoneNumber");
     frmvalidator.addValidation("email", "email", "Please enter a valid email address");
-</script>
+</script> -->
 </body>
 
 </html>

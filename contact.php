@@ -22,11 +22,18 @@
 
         <p>
             <label for='message'> Message:</label><br>
-            <textarea name="message"></textarea>
+            <textarea name="message" required></textarea>
         </p>
 
         <input type="submit" value="Submit"><br>
     </form>
+    <script language="JavaScript">
+        var frmvalidator = new Validator("contactform");
+        frmvalidator.addValidation("name", "req", "Please provide your name");
+        frmvalidator.addValidation("email", "req", "Please provide your email");
+        frmvalidator.addValidation("phoneNumber", "req", "Please provide your phoneNumber");
+        frmvalidator.addValidation("email", "email", "Please enter a valid email address");
+    </script>
     <?php
     include('includes/footer.php');
     ?>

@@ -14,4 +14,10 @@
     <header>
         <img src="image_uploads/football2.png" id="header_image">
         <h1>Player Database</h1>
+        <div class="topnav">
+            <a class="active" href="index.php">Home</a>
+            <a href="add_player_form.php">Add Player</a>
+            <a href="category_list.php">Categories</a>
+            <a href="contact.php">Contact</a>
+        </div>
     </header>
