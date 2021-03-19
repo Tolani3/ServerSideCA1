@@ -96,6 +96,13 @@ $statement3->closeCursor();
                             <input type="submit" value="Edit">
                         </form>
                     </td>
+                    <td>
+                        <form action="purchase_component_form.php" method="post">
+                            <input type="hidden" name="player_id" value="<?php echo $component['playerID']; ?>">
+                            <input type="hidden" name="category_id" value="<?php echo $component['categoryID']; ?>">
+                            <input type="submit" value="Buy" class="green-button">
+                        </form>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </table>
