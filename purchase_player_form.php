@@ -20,17 +20,17 @@ $statement->closeCursor();
 
        ?>
        <h1>Details</h1>
-       <form action="purchase_component.php" method="post" enctype="multipart/form-data" class="add_component_form">
+       <form action="purchase_player.php" method="post" enctype="multipart/form-data" class="add_player_form.php">
               <input type="hidden" name="player_id" value="<?php echo $players['playerID']; ?>">
-              <input type="hidden" name="componentName" value="<?php echo $players['name']; ?>">
+              <input type="hidden" name="playerName" value="<?php echo $players['name']; ?>">
 
 
               <?php if ($players['image'] != "") { ?>
                      <p><img id="purchase-picture" src="image_uploads/<?php echo $players['image']; ?>" height="300" /></p>
               <?php } ?>
 
-              <label>Component Name:</label>
-              <p class="product_info"><?php echo $players['name']; ?> </p>
+              <label>Player Name:</label>
+              <p class="product_info"><?php echo $players['playerID']; ?> </p>
 
               <div>
                      <label id="label_checkMark" for="fullName">Full Name: </label>

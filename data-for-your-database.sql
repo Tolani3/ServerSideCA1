@@ -84,14 +84,13 @@ INSERT INTO `players` (`playerID`, `categoryID`, `name`, `DateOfBirth`, `positio
 (52, 4, 'Ederson Moraes', '1993-08-17', 'Sweeper Keeper', '78.00', '410358.jpg');
 
 --
--- Indexes for dumped tables
---
 
---
--- Indexes for table `players`
---
-ALTER TABLE `players`
-  ADD PRIMARY KEY (`playerID`);
+CREATE TABLE `orders` (
+  `playerID` int(11) NOT NULL,
+  `orderID` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+)  ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 --
 -- AUTO_INCREMENT for dumped tables
