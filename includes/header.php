@@ -19,5 +19,8 @@
             <a href="add_player_form.php">Add Player</a>
             <a href="category_list.php">Categories</a>
             <a href="contact.php">Contact</a>
+            <a href="register.php">Regsiter</a>
+            <a href="login.php">Login</a>
+
         </div>
     </header>
