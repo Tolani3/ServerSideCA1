@@ -17,6 +17,7 @@
         <div class="topnav">
             <a class="active" href="index.php">Home</a>
             <a href="add_player_form.php">Add Player</a>
+            <a href="manage_players.php">Manage Players</a>
             <a href="category_list.php">Categories</a>
             <a href="contact.php">Contact</a>
             <a href="register.php">Regsiter</a>

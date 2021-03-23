@@ -1,26 +1,5 @@
 <?php
 
-/**
- * Start the session.
- */
-session_start();
-
-/**
- * Check if the user is logged in.
- */
-if (!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])) {
-    //User not logged in. Redirect them back to the login.php page.
-    header('Location: login.php');
-    exit;
-}
-
-
-/**
- * Print out something that only logged in users can see.
- */
-
-echo 'Congratulations! You are logged in!';
-
 require_once('database.php');
 
 // Get category ID
@@ -94,8 +73,6 @@ $statement3->closeCursor();
                 <th>D.O.B</th>
                 <th>Position</th>
                 <th>Price</th>
-                <th>Delete</th>
-                <th>Edit</th>
             </tr>
             <?php foreach ($players as $player) : ?>
                 <tr>
@@ -104,27 +81,6 @@ $statement3->closeCursor();
                     <td><?php echo $player['DateOfBirth']; ?></td>
                     <td><?php echo $player['position']; ?></td>
                     <td class="right"><?php echo "€" . $player['price']; ?></td>
-                    <td>
-                        <form action="delete_player.php" method="post" id="delete_record_form">
-                            <input type="hidden" name="player_id" value="<?php echo $player['playerID']; ?>">
-                            <input type="hidden" name="category_id" value="<?php echo $player['categoryID']; ?>">
-                            <input type="submit" value="Delete">
-                        </form>
-                    </td>
-                    <td>
-                        <form action="edit_player_form.php" method="post" id="delete_record_form">
-                            <input type="hidden" name="player_id" value="<?php echo $player['playerID']; ?>">
-                            <input type="hidden" name="category_id" value="<?php echo $player['categoryID']; ?>">
-                            <input type="submit" value="Edit">
-                        </form>
-                    </td>
-                    <td>
-                        <form action="purchase_player_form.php" method="post">
-                            <input type="hidden" name="player_id" value="<?php echo $component['playerID']; ?>">
-                            <input type="hidden" name="category_id" value="<?php echo $component['categoryID']; ?>">
-                            <input type="submit" value="Buy" class="green-button">
-                        </form>
-                    </td>
                 </tr>
             <?php endforeach; ?>
         </table>
