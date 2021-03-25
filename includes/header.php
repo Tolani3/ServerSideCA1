@@ -22,7 +22,7 @@
             <a href="contact.php">Contact</a>
             <a href="register.php">Regsiter</a>
             <a href="login.php">Login</a>
-            <a href="logut.php">Logut</a>
+            <a href="logout.php">Logut</a>
 
 
         </div>

@@ -73,7 +73,7 @@ $statement->closeCursor();
         <br>
     </form>
     <p><a href="index.php">View Homepage</a></p>
-    <script src="validation.js"></script>
+    <script src="scripts/validation.js"></script>
     <?php
     include('includes/footer.php');
     ?>

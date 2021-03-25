@@ -2,6 +2,10 @@
 require('database.php');
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $player_id = filter_input(INPUT_POST, 'player_id', FILTER_VALIDATE_INT);
+$name = filter_input(INPUT_POST, 'name');
+
+
+
 $query = 'SELECT *
           FROM players
           WHERE playerID = :player_id';
@@ -30,7 +34,8 @@ $statement->closeCursor();
               <?php } ?>
 
               <label>Player Name:</label>
-              <p class="product_info"><?php echo $players['playerID']; ?> </p>
+              <p class="product_info"><?php echo $players['name']; ?> </p>
+
 
               <div>
                      <label id="label_checkMark" for="fullName">Full Name: </label>
@@ -63,13 +68,13 @@ $statement->closeCursor();
               </div>
 
               <label>Shipping Method:</label>
-              <input type="radio" id="priority" name="shipping" value="Priority" onclick="findTotal(10,<?php echo $players['price'] ?>)" required>
-              <label for="priority">Priority Shipping: €10 </label>
+              <input type="radio" id="priority" name="shipping" value="Priority" onclick="findTotal(2,<?php echo $players['price'] ?>)" required>
+              <label for="priority">This Game Week: €2 </label>
               <br>
 
               <label></label>
               <input type="radio" id="free" name="shipping" value="Free" onclick="findTotal(0,<?php echo $players['price'] ?>)">
-              <label for="free">Free Shipping</label>
+              <label for="free">Next Game Week</label>
               <br>
 
               <label>Total: </label>
@@ -82,7 +87,7 @@ $statement->closeCursor();
               <input type="hidden" id="passedValuePrice" name="passedValuePrice" value="findTotal(<?php echo $players['price']; ?>)">
        </form>
 
-       <script src="validation.js"></script>
+       <script src="scripts/validation.js"></script>
 
 
        <p><a href=".?category_id=<?php echo $category_id ?>">View Homepage</a></p>

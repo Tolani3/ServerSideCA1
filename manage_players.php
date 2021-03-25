@@ -120,9 +120,11 @@ $statement3->closeCursor();
                     </td>
                     <td>
                         <form action="purchase_player_form.php" method="post">
-                            <input type="hidden" name="player_id" value="<?php echo $component['playerID']; ?>">
-                            <input type="hidden" name="category_id" value="<?php echo $component['categoryID']; ?>">
+                            <input type="hidden" name="player_id" value="<?php echo $player['playerID']; ?>">
+                            <input type="hidden" name="category_id" value="<?php echo $player['categoryID']; ?>">
+                            <input type="hidden" name="name" value="<?php echo $player['name']; ?>">
                             <input type="submit" value="Buy" class="green-button">
+
                         </form>
                     </td>
                 </tr>
