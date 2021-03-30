@@ -3,9 +3,6 @@ require('database.php');
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $player_id = filter_input(INPUT_POST, 'player_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
-
-
-
 $query = 'SELECT *
           FROM players
           WHERE playerID = :player_id';
