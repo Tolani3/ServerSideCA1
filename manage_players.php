@@ -67,7 +67,7 @@ $statement3->closeCursor();
     <?php
     include('includes/header.php');
     ?>
-    <h1>Player List</h1>
+    <h1>Manage Players</h1>
 
     <aside>
         <!-- display a list of categories -->
@@ -75,7 +75,7 @@ $statement3->closeCursor();
         <nav>
             <ul>
                 <?php foreach ($categories as $category) : ?>
-                    <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
+                    <li><a href="?category_id=<?php echo $category['categoryID']; ?>">
                             <?php echo $category['categoryName']; ?>
                         </a>
                     </li>
