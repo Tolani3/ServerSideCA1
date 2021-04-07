@@ -79,9 +79,12 @@ if (isset($_POST['login'])) {
         <label for="username">Username</label>
         <input type="text" id="username" name="username"><br>
         <label for="password">Password</label>
-        <input type="text" id="password" name="password"><br>
+        <input type="password" id="myInput"><br>
+        <input type="checkbox" onclick="hidePassword()">Show Password<br>
         <input type="submit" name="login" value="Login">
     </form>
+    <script src="scripts\password.js"></script>
+
     <?php
     include('includes/footer.php');
     ?>
