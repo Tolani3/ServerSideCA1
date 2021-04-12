@@ -33,36 +33,35 @@ $statement->closeCursor();
               <label>Player Name:</label>
               <p class="product_info"><?php echo $players['name']; ?> </p>
 
-
               <div>
                      <label id="label_checkMark" for="fullName">Full Name: </label>
                      <input type="input" id="fullName" name="fullName" required onkeyup="validate_name()">
-                     <p></p>
               </div>
               <br>
 
               <div>
                      <label id="label_checkMark2" for="phoneNo">Phone No: </label>
                      <input type="input" id="phoneNo" name="phoneNo" required onkeyup="validate_phone()">
-                     <br>
               </div>
+              <br>
 
               <div>
                      <label id="label_checkMark3" for="address">Address: </label>
                      <input type="input" id="address" name="address" required size="50%" />
-                     <br><br>
               </div>
+              <br>
 
               <div>
                      <label id="label_checkMark4" for="postCode">Post Code: </label>
                      <input type="input" id="postCode" name="postCode" required onkeyup="validate_postcode()">
-                     <br>
               </div>
+              <br>
 
               <div>
                      <label>Price:</label>
                      <p class="product_info"><?php echo ('€' . $players['price']); ?></p>
               </div>
+              <br>
 
               <label>Shipping Method:</label>
               <input type="radio" id="priority" name="shipping" value="Priority" onclick="findTotal(2,<?php echo $players['price'] ?>)" required>
@@ -78,7 +77,7 @@ $statement->closeCursor();
               <p id="totalPrice" class="product_info" name="total"><?php echo ('€' . $players['price']); ?></p>
 
               <label>&nbsp;</label>
-              <input type="submit" value="Purchase" class="green-button" id="submit" disabled=true">
+              <input type="submit" value="Purchase" class="green-button" id="submit" disabled="true">
               <br>
 
               <input type="hidden" id="passedValuePrice" name="passedValuePrice" value="findTotal(<?php echo $players['price']; ?>)">
