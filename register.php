@@ -87,13 +87,20 @@ require 'login_connect.php';
     <h1>Register</h1>
     <form action="register.php" method="post">
         <label for="username">Username</label>
-        <input type="text" id="username" name="username"><br>
+        <input type="text" id="username" name="username" onBlur="username_validation();" required><br>
+        <span id="name_err"></span>
+        <br>
         <label for="password">Password</label>
-        <input type="password" id="myInput"><br>
+        <input type="password" id="myInput" value=""> <br><br>
+
+        <label for="password">Confirm Password</label>
+        <input type="password" id="myInput2" value=""><br>
+
         <input type="checkbox" onclick="hidePassword()">Show Password<br>
         <input type="submit" name="register" value="Register"></button>
     </form>
     <script src="scripts\password.js"></script>
+    <script src="scripts/validation.js"></script>
     <?php
     include('includes/footer.php');
     ?>
