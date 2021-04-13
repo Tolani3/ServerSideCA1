@@ -85,7 +85,7 @@ require 'login_connect.php';
     ?>
 
     <h1>Register</h1>
-    <form action="register.php" method="post">
+    <form id="add_player_form" action="register.php" method="post">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" onBlur="username_validation();" required><br>
         <span id="name_err"></span>
@@ -99,7 +99,7 @@ require 'login_connect.php';
         <input type="checkbox" onclick="hidePassword()">Show Password<br>
         <input type="submit" name="register" value="Register"></button>
     </form>
-    <script src="scripts\password.js"></script>
+    <script src="scripts/password.js"></script>
     <script src="scripts/validation.js"></script>
     <?php
     include('includes/footer.php');

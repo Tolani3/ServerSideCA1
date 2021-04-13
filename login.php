@@ -75,7 +75,7 @@ if (isset($_POST['login'])) {
     include('includes/header.php');
     ?>
     <h1>Login</h1>
-    <form action="login.php" method="post">
+    <form id="add_player_form" action="login.php" method="post">
         <label for="username">Username</label>
         <input type="text" id="username" name="username"><br>
         <label for="password">Password</label>
@@ -83,7 +83,7 @@ if (isset($_POST['login'])) {
         <input type="checkbox" onclick="hidePassword()">Show Password<br>
         <input type="submit" name="login" value="Login">
     </form>
-    <script src="scripts\password.js"></script>
+    <script src="scripts/password.js"></script>
 
     <?php
     include('includes/footer.php');

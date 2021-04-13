@@ -154,6 +154,10 @@ br {
   width: 15em;
 }
 
+.product_info {
+  font-weight: bold;
+}
+
 /*Sidebar Style Start*/
 aside {
   float: left;
