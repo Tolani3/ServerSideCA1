@@ -90,3 +90,10 @@ br {
 .product_info {
     font-weight: bold;
 }
+
+#parent #popup {
+    display: none;
+}
+#parent:hover #popup {
+    display: block;
+}

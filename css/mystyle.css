@@ -153,6 +153,14 @@ br {
   font-weight: bold;
 }
 
+#parent #popup {
+  display: none;
+}
+
+#parent:hover #popup {
+  display: block;
+}
+
 /*Sidebar Style Start*/
 aside {
   float: left;
