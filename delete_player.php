@@ -1,6 +1,12 @@
 <?php
 require_once('database.php');
 
+session_start();
+if (!isset($_SESSION['user_id']) || ($_SESSION['user_id'] != 1)) {
+       header('Location: index.php');
+       exit;
+}
+
 // Get IDs
 $player_id = filter_input(INPUT_POST, 'player_id', FILTER_VALIDATE_INT);
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
@@ -17,4 +23,3 @@ if ($player_id != false && $category_id != false) {
 
 // display the Product List page
 include('index.php');
-?>

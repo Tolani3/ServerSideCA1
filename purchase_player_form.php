@@ -32,7 +32,7 @@ $statement->closeCursor();
 
               <label>Player Name:</label>
               <p class="product_info"><?php echo $players['name']; ?> </p>
-
+              <br><br>
               <div>
                      <label id="label_checkMark" for="fullName">Full Name: </label>
                      <input type="input" id="fullName" name="fullName" required onkeyup="validate_name()">
@@ -65,12 +65,11 @@ $statement->closeCursor();
 
               <label>Shipping Method:</label>
               <input type="radio" id="priority" name="shipping" value="Priority" onclick="findTotal(2,<?php echo $players['price'] ?>)" required>
-              <label for="priority">This Game Week: €2 </label>
-              <br>
+              <label for="priority">This Week €2</label>
 
               <label></label>
               <input type="radio" id="free" name="shipping" value="Free" onclick="findTotal(0,<?php echo $players['price'] ?>)">
-              <label for="free">Next Game Week</label>
+              <label for="free">Next Week</label>
               <br>
 
               <label>Total: </label>

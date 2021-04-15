@@ -2,6 +2,10 @@
 
 require_once('database.php');
 
+session_start();
+if (!isset($_SESSION['id']) || ($_SESSION['login'])) {
+    header('Location: login.php');
+}
 // Get category ID
 if (!isset($category_id)) {
     $category_id = filter_input(
