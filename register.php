@@ -78,7 +78,8 @@ require 'login_connect.php';
         //If the signup process is successful.
         if ($result) {
             //What you do here is up to you!
-            echo 'Thank you for registering with our website. Please login here __';
+            header('Location: login.php');
+            exit;
         }
     }
 

@@ -60,7 +60,7 @@ if (isset($_POST['login'])) {
             $_SESSION['logged_in'] = time();
 
             //Redirect to our protected page, which we called home.php
-            header('Location: index.php');
+            header('Location: manage_players.php');
             exit;
         } else {
             //$validPassword was FALSE. Passwords do not match.
