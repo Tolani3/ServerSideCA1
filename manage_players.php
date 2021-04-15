@@ -88,15 +88,20 @@ $statement4->closeCursor();
                     </li>
                 <?php endforeach; ?>
             </ul>
-            <h2>USERS</h2>
-            <ul>
-                <?php foreach ($users as $users) : ?>
-                    <li>
-                        <?php echo $users['username'] ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+
+            <div id="parent">
+                <h2>USERS</h2>
+                <ul>
+                    <div id="popup"><?php foreach ($users as $users) : ?>
+                            <li>
+                                <?php echo $users['username'] ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </div>
+                </ul>
+            </div>
+
         </nav>
     </aside>
 
@@ -112,6 +117,7 @@ $statement4->closeCursor();
                 <th>Price</th>
                 <th>Delete</th>
                 <th>Edit</th>
+                <th>Buy</th>
             </tr>
             <?php foreach ($players as $player) : ?>
                 <tr>

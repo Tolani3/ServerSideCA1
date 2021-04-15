@@ -28,11 +28,6 @@
             <textarea name="message" required></textarea>
         </p>
 
-        <div id="parent">
-            This is the main container.
-            <div id="popup">some text here</div>
-        </div>
-
         <input type="submit" value="Submit"><br>
     </form>
     <script language="JavaScript">
