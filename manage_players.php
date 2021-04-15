@@ -62,7 +62,15 @@ $statement3->bindValue(':category_id', $category_id);
 $statement3->execute();
 $players = $statement3->fetchAll();
 $statement3->closeCursor();
+
+//Shows all users
+$queryAllUsers = 'SELECT * FROM users';
+$statement4 = $db->prepare($queryAllUsers);
+$statement4->execute();
+$users = $statement4->fetchAll();
+$statement4->closeCursor();
 ?>
+
 <div class="container">
     <?php
     include('includes/header.php');
@@ -77,6 +85,15 @@ $statement3->closeCursor();
                 <?php foreach ($categories as $category) : ?>
                     <li><a href="?category_id=<?php echo $category['categoryID']; ?>">
                             <?php echo $category['categoryName']; ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            <h2>USERS</h2>
+            <ul>
+                <?php foreach ($users as $users) : ?>
+                    <li>
+                        <?php echo $users['username'] ?>
                         </a>
                     </li>
                 <?php endforeach; ?>
