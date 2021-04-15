@@ -19,7 +19,6 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])) {
  * Print out something that only logged in users can see.
  */
 
-echo 'Congratulations! You are logged in!';
 
 require_once('database.php');
 

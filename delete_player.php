@@ -3,8 +3,8 @@ require_once('database.php');
 
 session_start();
 if (!isset($_SESSION['user_id']) || ($_SESSION['user_id'] != 1)) {
-       header('Location: index.php');
-       exit;
+    header('Location: manage_players.php');
+    exit;
 }
 
 // Get IDs

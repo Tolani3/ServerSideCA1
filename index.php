@@ -2,10 +2,11 @@
 
 require_once('database.php');
 
-session_start();
-if (!isset($_SESSION['id']) || ($_SESSION['login'])) {
-    header('Location: login.php');
-}
+// session_start();
+// if (!isset($_SESSION['user_id']) || ($_SESSION['login'])) {
+//     header('Location: manage_players.php');
+// }
+
 // Get category ID
 if (!isset($category_id)) {
     $category_id = filter_input(
