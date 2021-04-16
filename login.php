@@ -25,11 +25,13 @@ if (isset($_POST['login'])) {
 
     //Retrieve the field values from our login form.
     $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
-    $passwordAttempt = !empty($_POST['password']) ? trim($_POST['password']) : null;
     // $email = !empty($_POST['email']) ? trim($_POST['email']) : null;
+    $passwordAttempt = !empty($_POST['password']) ? trim($_POST['password']) : null;
 
     //Retrieve the user account information for the given username.
     $sql = "SELECT id, username, password FROM users WHERE username = :username";
+    // $sql = "SELECT id, username, email, password FROM users WHERE username = :username";
+
     $stmt = $pdo->prepare($sql);
 
     //Bind value.
@@ -61,6 +63,10 @@ if (isset($_POST['login'])) {
             $_SESSION['name'] = $user['username'];
             $_SESSION['logged_in'] = time();
 
+            echo '<pre>';
+            var_dump($_SESSION);
+            echo '</pre>';
+
             //Redirect to our protected page, which we called home.php
             header('Location: index.php');
             // header('Location: manage_players.php');
@@ -81,15 +87,15 @@ if (isset($_POST['login'])) {
     <form id="add_player_form" action="login.php" method="post">
         <label for="username">Username</label>
         <input type="text" id="username" name="username"><br>
-        <!-- <label for='email'> Email:</label>
-        <input type="text" name="email"><br> -->
+        <label for='email'> Email:</label>
+        <input type="text" name="email"><br>
         <label for="password">Password</label>
         <input type="password" id="myInput"><br>
         <input type="checkbox" onclick="hidePassword()">Show Password<br>
         <input type="submit" name="login" value="Login">
     </form>
     <script src="scripts/password.js"></script>
-    <!-- <script src="scripts/gen_validatorv31.js"></script> -->
+    <script src="scripts/gen_validatorv31.js"></script>
 
 
     <?php
