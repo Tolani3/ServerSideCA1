@@ -26,6 +26,7 @@ if (isset($_POST['login'])) {
     //Retrieve the field values from our login form.
     $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
     $passwordAttempt = !empty($_POST['password']) ? trim($_POST['password']) : null;
+    // $email = !empty($_POST['email']) ? trim($_POST['email']) : null;
 
     //Retrieve the user account information for the given username.
     $sql = "SELECT id, username, password FROM users WHERE username = :username";
@@ -57,6 +58,7 @@ if (isset($_POST['login'])) {
 
             //Provide the user with a login session.
             $_SESSION['user_id'] = $user['id'];
+            $_SESSION['name'] = $user['username'];
             $_SESSION['logged_in'] = time();
 
             //Redirect to our protected page, which we called home.php
@@ -79,14 +81,16 @@ if (isset($_POST['login'])) {
     <form id="add_player_form" action="login.php" method="post">
         <label for="username">Username</label>
         <input type="text" id="username" name="username"><br>
-        <label for='email'> Email:</label>
-        <input type="text" name="email"><br>
+        <!-- <label for='email'> Email:</label>
+        <input type="text" name="email"><br> -->
         <label for="password">Password</label>
         <input type="password" id="myInput"><br>
         <input type="checkbox" onclick="hidePassword()">Show Password<br>
         <input type="submit" name="login" value="Login">
     </form>
     <script src="scripts/password.js"></script>
+    <!-- <script src="scripts/gen_validatorv31.js"></script> -->
+
 
     <?php
     include('includes/footer.php');

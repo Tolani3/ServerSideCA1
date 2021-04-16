@@ -1,5 +1,8 @@
 <footer>
-    <p>&copy; <?php echo date("Y"); ?> My PHP CRUD App</p>
+
+    <h4><a href="category_list.php">Manage Categories</a></h4>
+    <h4><a href="contact.php">Contact Us</a></h4>
+    <p>&copy; <?php echo date("Y"); ?> PLAYER DATABASE</p>
 </footer>
 </div><!-- close div container -->
 

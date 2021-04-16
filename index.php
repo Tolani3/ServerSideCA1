@@ -89,8 +89,10 @@ $statement3->closeCursor();
                 </tr>
             <?php endforeach; ?>
         </table>
-        <p><a href="add_player_form.php">Add Record</a></p>
-        <p><a href="category_list.php">Manage Categories</a></p>
+        <!-- <p><a href="add_player_form.php">Add Record</a></p> -->
+        <!-- <p><a href="category_list.php">Manage Categories</a></p>
+        <p><a href="contact.php">Contact Us</a></p> -->
+
     </section>
 
 
