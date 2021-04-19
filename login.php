@@ -95,7 +95,7 @@ if (isset($_POST['login'])) {
         <label for='email'> Email:</label>
         <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"><br>
         <label for="password">Password</label>
-        <input type="password" id="myInput"><br>
+        <input type="password" id="myInput" required><br>
         <input type="checkbox" onclick="hidePassword()">Show Password<br>
         <input type="submit" name="login" value="Login">
     </form>

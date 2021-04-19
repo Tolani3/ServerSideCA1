@@ -25,6 +25,7 @@ require 'login_connect.php';
     ?>
 
     <?php
+
     //If the POST var "register" exists (our submit button), then we can
     //assume that the user has submitted the registration form.
     if (isset($_POST['register'])) {
@@ -102,20 +103,21 @@ require 'login_connect.php';
 
     <h1>Register</h1>
     <form id="add_player_form" action="register.php" method="post">
+
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" onBlur="username_validation();" required><br>
         <span id="name_err"></span>
         <br>
 
         <label for='email'> Email:</label>
-        <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required><br><br>
+        <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"><br><br>
 
         <label for="password">Password:</label>
         <input type="password" id="myInput" value="">
         <br><br>
 
         <label for="password">Confirm Password:</label>
-        <input type="password" id="myInput2" value=""><br>
+        <input type="password" id="myInput2" value="" required><br>
 
         <input type="checkbox" onclick="hidePassword()">Show Password:<br>
         <input type="submit" name="register" value="Register"></button>
