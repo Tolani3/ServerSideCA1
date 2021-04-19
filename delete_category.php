@@ -9,7 +9,7 @@ if ($category_id == null || $category_id == false) {
 } else {
     require_once('database.php');
 
-    // Add the product to the database  
+    // delete the category to the database  
     $query = 'DELETE FROM categories 
               WHERE categoryID = :category_id';
     $statement = $db->prepare($query);
@@ -20,4 +20,3 @@ if ($category_id == null || $category_id == false) {
     // Display the Category List page
     include('category_list.php');
 }
-?>

@@ -1,12 +1,12 @@
 <?php
 require_once('database.php');
 
-$user_id - filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
+$user_id = filter_input(INPUT_POST, 'user_id', FILTER_VALIDATE_INT);
 
 // Get users for selected category
 $queryRecords = "SELECT * FROM users";
 $statement3 = $db->prepare($queryRecords);
-$statement3->bindValue('id', $user_id);
+$statement3->bindValue('user_id', $user_id);
 $statement3->execute();
 $user = $statement3->fetchAll();
 $statement3->closeCursor();
@@ -76,10 +76,12 @@ $statement2->closeCursor();
                 <tr>
                     <td><?php echo $user['username']; ?></td>
                     <td><?php echo $user['email']; ?></td>
-
-                    <form action="delete_user.php" method="post" id="delete_record_form">
-                        <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                        <input type="submit" value="Delete">
+                    <td>
+                        <form action="delete_user.php" method="post" id="delete_record_form">
+                            <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </table>
