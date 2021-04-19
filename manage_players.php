@@ -89,7 +89,7 @@ $statement4->closeCursor();
                 <?php endforeach; ?>
             </ul>
 
-            <div id="parent">
+            <!-- <div id="parent">
                 <h2>USERS</h2>
                 <ul>
                     <div id="popup"><?php foreach ($users as $users) : ?>
@@ -100,7 +100,7 @@ $statement4->closeCursor();
                         <?php endforeach; ?>
                     </div>
                 </ul>
-            </div>
+            </div> -->
 
         </nav>
     </aside>

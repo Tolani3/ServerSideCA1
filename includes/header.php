@@ -1,5 +1,10 @@
 <!-- the head section -->
 
+<?php
+
+?>
+
+
 <head>
     <title>My PHP CRUD App</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,11 +21,19 @@
         <h1>Player Database</h1>
         <div class="topnav">
             <a class="active" href="index.php">Home</a>
-            <!-- <a href="add_player_form.php">Add Player</a> -->
             <a href="manage_players.php">Manage Players</a>
             <a href="contact.php">Contact</a>
-            <a href="register.php">Regsiter</a>
-            <a href="login.php">Login</a>
-            <a href="logout.php">Logut</a>
+            <a href="users.php">Users</a>
+
+            <?php
+            if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'] != 0)) {
+            ?>
+                <a href="logout.php">Logut</a>
+
+            <?php } else { ?>
+
+                <a href="register.php">Regsiter</a>
+                <a href="login.php">Login</a>
+            <?php } ?>
         </div>
     </header>

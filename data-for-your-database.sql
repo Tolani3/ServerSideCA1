@@ -20,7 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `player_shopca1`
 --
-
+DROP DATABASE IF EXISTS `player_shopca1`;
+CREATE DATABASE IF NOT EXISTS `player_shopca1` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `player_shopca1`;
 -- --------------------------------------------------------
 
 --
@@ -32,6 +34,7 @@ CREATE TABLE `categories` (
   `categoryID` int(11) NOT NULL,
   `categoryName` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+----------------------------------------------
 
 --
 -- Dumping data for table `categories`
@@ -44,6 +47,17 @@ INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
 (4, 'Goalkeepers');
 
 -- --------------------------------------------------------
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE `orders` (
+  `playerID` int(11) NOT NULL,
+  `orderID` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 --
 -- Table structure for table `players`
@@ -85,18 +99,14 @@ INSERT INTO `players` (`playerID`, `categoryID`, `name`, `DateOfBirth`, `positio
 
 --
 
-CREATE TABLE `orders` (
-  `playerID` int(11) NOT NULL,
-  `orderID` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
-)  ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `username` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(60) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `id` int(11) NOT NULL,
+  `username` varchar(15) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -105,19 +115,17 @@ CREATE TABLE `users` (
 --
 -- Indexes for table `users`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`);
+-- Indexes for table `players`
+--
+ALTER TABLE `players`
+  ADD PRIMARY KEY (`playerID`);
 
 --
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  ADD PRIMARY KEY (`id`);
+
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -126,7 +134,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `players`
 --
 ALTER TABLE `players`
-  MODIFY `playerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `playerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
