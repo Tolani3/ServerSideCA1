@@ -163,6 +163,24 @@ br {
   display: block;
 }
 
+#delete_button {
+  font-weight: bold;
+  background-color: red;
+  border: white;
+}
+
+#purchase_button {
+  font-weight: bold;
+  background-color: green;
+  border: white;
+}
+
+#edit_button {
+  font-weight: bold;
+  background-color: yellow;
+  border: white;
+}
+
 /*Sidebar Style Start*/
 aside {
   float: left;

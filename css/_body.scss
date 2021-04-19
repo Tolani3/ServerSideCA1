@@ -99,3 +99,21 @@ br {
 #parent:hover #popup {
     display: block;
 }
+
+#delete_button {
+    font-weight: bold;
+    background-color: $delete;
+    border: white;
+}
+
+#purchase_button {
+    font-weight: bold;
+    background-color: $buy;
+    border: white;
+}
+
+#edit_button {
+    font-weight: bold;
+    background-color: $edit;
+    border: white;
+}

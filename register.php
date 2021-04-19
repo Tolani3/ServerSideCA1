@@ -86,7 +86,7 @@ require 'login_connect.php';
         //     // exit;
         // }
 
-        $signup = 'Congratulations on registering';
+        $signup = 'Succesful registeration';
         if ($result) {
             //What you do here is up to you!
             echo "<SCRIPT> 
@@ -108,7 +108,7 @@ require 'login_connect.php';
         <br>
 
         <label for='email'> Email:</label>
-        <input type="email" name="email"><br><br>
+        <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required><br><br>
 
         <label for="password">Password:</label>
         <input type="password" id="myInput" value="">

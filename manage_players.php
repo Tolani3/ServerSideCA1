@@ -89,7 +89,7 @@ $statement4->closeCursor();
                 <?php endforeach; ?>
             </ul>
 
-            <!-- <div id="parent">
+            <div id="parent">
                 <h2>USERS</h2>
                 <ul>
                     <div id="popup"><?php foreach ($users as $users) : ?>
@@ -100,7 +100,7 @@ $statement4->closeCursor();
                         <?php endforeach; ?>
                     </div>
                 </ul>
-            </div> -->
+            </div>
 
         </nav>
     </aside>
@@ -130,14 +130,14 @@ $statement4->closeCursor();
                         <form action="delete_player.php" method="post" id="delete_record_form">
                             <input type="hidden" name="player_id" value="<?php echo $player['playerID']; ?>">
                             <input type="hidden" name="category_id" value="<?php echo $player['categoryID']; ?>">
-                            <input type="submit" value="Delete">
+                            <input id="delete_button" type="submit" value="Delete">
                         </form>
                     </td>
                     <td>
                         <form action="edit_player_form.php" method="post" id="delete_record_form">
                             <input type="hidden" name="player_id" value="<?php echo $player['playerID']; ?>">
                             <input type="hidden" name="category_id" value="<?php echo $player['categoryID']; ?>">
-                            <input type="submit" value="Edit">
+                            <input id="edit_button" type="submit" value="Edit">
                         </form>
                     </td>
                     <td>
@@ -145,7 +145,7 @@ $statement4->closeCursor();
                             <input type="hidden" name="player_id" value="<?php echo $player['playerID']; ?>">
                             <input type="hidden" name="category_id" value="<?php echo $player['categoryID']; ?>">
                             <input type="hidden" name="name" value="<?php echo $player['name']; ?>">
-                            <input type="submit" value="Buy" class="green-button">
+                            <input id="purchase_button" type="submit" value="Buy" class="green-button">
 
                         </form>
                     </td>

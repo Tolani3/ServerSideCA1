@@ -16,6 +16,12 @@ function username_validation() {
     }
 }
 
+
+function email() {
+    var em = document.getElementById("email").pattern;
+    document.getElementById("GFG").innerHTML = em;
+}
+
 /*JavaScript For buying a player */
 findTotal = (shippingPrice, productPrice) => {
     document.getElementById("totalPrice").innerHTML = "€" + (productPrice + parseFloat(shippingPrice));
