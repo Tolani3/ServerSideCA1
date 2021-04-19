@@ -108,6 +108,7 @@ CREATE TABLE `users` (
   `password` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--Admin//admin@admin.com//id=1
 --
 -- Indexes for dumped tables
 --
