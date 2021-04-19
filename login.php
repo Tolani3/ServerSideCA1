@@ -42,12 +42,17 @@ if (isset($_POST['login'])) {
 
     //Fetch row.
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    $message = 'Incorrect Login Details Please Try Again!!';
 
     //If $row is FALSE.
     if ($user === false) {
         //Could not find a user with that username!
         //PS: You might want to handle this error in a more user-friendly manner!
-        die('Incorrect username / password combination!');
+        // header('Location: login.php');
+        echo "<SCRIPT> 
+        alert('$message')
+        window.location.replace('login.php');
+    </SCRIPT>";
     } else {
         //User account found. Check to see if the given password matches the
         //password hash that we stored in our users table.

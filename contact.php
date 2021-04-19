@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!-- The Head section -->
 <div class="container">
     <?php

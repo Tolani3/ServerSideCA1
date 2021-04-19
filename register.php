@@ -78,13 +78,24 @@ require 'login_connect.php';
         //Execute the statement and insert the new account.
         $result = $stmt->execute();
 
-        //If the signup process is successful.
+        // //If the signup process is successful.
+        // if ($result) {
+        //     //What you do here is up to you!
+        //     echo "<script> window.alert('Register Successful!');</script>";
+        //     header('Location: login.php');
+        //     // exit;
+        // }
+
+        $signup = 'Congratulations on registering';
         if ($result) {
             //What you do here is up to you!
-            echo "<script> window.alert('Register Successful!');</script>";
-            header('Location: login.php');
-            // exit;
+            echo "<SCRIPT> 
+            alert('$signup')
+            window.location.replace('login.php');
+        </SCRIPT>";
         }
+
+        exit;
     }
 
     ?>

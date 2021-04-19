@@ -1,5 +1,14 @@
 <?php
+session_start();
 require_once('database.php');
+
+
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])) {
+    //User not logged in. Redirect them back to the login.php page.
+    header('Location: login.php');
+    exit;
+}
+
 
 $user_id = filter_input(INPUT_POST, 'user_id', FILTER_VALIDATE_INT);
 
@@ -70,7 +79,6 @@ $statement2->closeCursor();
                 <th>Username</th>
                 <th>Email</th>
                 <th>Delete</th>
-                <th>Edit</th>
             </tr>
             <?php foreach ($user as $user) : ?>
                 <tr>

@@ -29,7 +29,7 @@ USE `player_shopca1`;
 -- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `categories`;
+-- DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `categoryID` int(11) NOT NULL,
   `categoryName` varchar(255) NOT NULL

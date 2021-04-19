@@ -1,4 +1,17 @@
 <?php
+
+session_start();
+
+if (!isset($_SESSION['user_id']) || ($_SESSION['user_id'] != 1)) {
+    $message = 'Only Admin can delete';
+    echo "<SCRIPT> 
+    alert('$message')
+    window.location.replace('category_list.php');
+</SCRIPT>";
+    // mysql_close();
+    exit;
+}
+
 // Get ID
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 
