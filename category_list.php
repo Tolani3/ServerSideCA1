@@ -3,8 +3,12 @@
 /**
  * Start the session.
  */
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
 
+<?php
 /**
  * Check if the user is logged in.
  */

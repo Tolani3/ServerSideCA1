@@ -31,7 +31,7 @@
             <?php
             if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'] != 0)) {
             ?>
-                <a href="users.php">Users</a>
+                <!-- <a href="users.php">Users</a> -->
                 <a href="logout.php">Log out</a>
 
             <?php } else { ?>

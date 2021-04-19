@@ -89,18 +89,26 @@ $statement4->closeCursor();
                 <?php endforeach; ?>
             </ul>
 
-            <div id="parent">
-                <h2>USERS</h2>
+
+            <!-- <div id="parent">
+                <h2>Admin</h2>
                 <ul>
-                    <div id="popup"><?php foreach ($users as $users) : ?>
-                            <li>
-                                <?php echo $users['username'] ?>
+                    <div id="popup">
+                        <li>
+                            <?php
+                            if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'] != 1)) {
+                            ?>
+                                <a href="logout.php">Log out</a>
+
                                 </a>
-                            </li>
-                        <?php endforeach; ?>
+                            <?php } else { ?>
+                                <a href="users.php">Users</a>
+                            <?php } ?>
+                        </li>
+
                     </div>
                 </ul>
-            </div>
+            </div> -->
 
         </nav>
     </aside>

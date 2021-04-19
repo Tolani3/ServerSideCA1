@@ -1,6 +1,10 @@
 <?php
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
 
+<?php
 require_once('database.php');
 
 // session_start();
@@ -66,6 +70,27 @@ $statement3->closeCursor();
                     </li>
                 <?php endforeach; ?>
             </ul>
+
+            <div id="parent">
+                <h2>Option</h2>
+                <ul>
+                    <div id="popup">
+                        <li>
+                            <?php
+                            if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'] != 1)) {
+                            ?>
+                                <a href="login.php">Login as Admin</a>
+
+                                </a>
+                            <?php } else { ?>
+                                <a href="users.php">Users</a>
+                            <?php } ?>
+                        </li>
+
+                    </div>
+                </ul>
+            </div>
+
         </nav>
     </aside>
 
