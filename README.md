@@ -20,6 +20,9 @@ This Github repository is home to a PHP Crud application.
 5. Change the file names, variable etc. to suit your project
 6. Run the project from your IDE
 7. Upload your website from localhost to web server
+8. Register and login as a user.
+9. Carry out tasks depending on given access level. 
+10. Contact Form to report any errors or suggestions
 
 
 ### Contact
