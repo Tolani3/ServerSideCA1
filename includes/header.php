@@ -36,7 +36,7 @@
 
             <?php } else { ?>
 
-                <a href="register.php">Regsiter</a>
+                <a href="register.php">Register</a>
                 <a href="login.php">Login</a>
             <?php } ?>
         </div>

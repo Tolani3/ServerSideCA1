@@ -90,7 +90,7 @@ $statement4->closeCursor();
             </ul>
 
 
-            <!-- <div id="parent">
+            <div id="parent">
                 <h2>Admin</h2>
                 <ul>
                     <div id="popup">
@@ -108,7 +108,7 @@ $statement4->closeCursor();
 
                     </div>
                 </ul>
-            </div> -->
+            </div>
 
         </nav>
     </aside>

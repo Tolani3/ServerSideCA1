@@ -71,7 +71,7 @@ $statement3->closeCursor();
                 <?php endforeach; ?>
             </ul>
 
-            <div id="parent">
+            <!-- <div id="parent">
                 <h2>Option</h2>
                 <ul>
                     <div id="popup">
@@ -89,7 +89,7 @@ $statement3->closeCursor();
 
                     </div>
                 </ul>
-            </div>
+            </div> -->
 
         </nav>
     </aside>

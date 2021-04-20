@@ -29,12 +29,11 @@ USE `player_shopca1`;
 -- Table structure for table `categories`
 --
 
--- DROP TABLE IF EXISTS `categories`;
+DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `categoryID` int(11) NOT NULL,
   `categoryName` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-----------------------------------------------
 
 --
 -- Dumping data for table `categories`
@@ -45,6 +44,21 @@ INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
 (2, 'Midfielders'),
 (3, 'Defenders'),
 (4, 'Goalkeepers');
+
+
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`categoryID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+COMMIT;
 
 -- --------------------------------------------------------
 --
@@ -112,7 +126,8 @@ CREATE TABLE `users` (
 --
 -- Indexes for dumped tables
 --
-
+INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
+                    (1,     `Admin`, `admin@admin.com`, `admin1`);
 --
 -- Indexes for table `users`
 --

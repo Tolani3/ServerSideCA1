@@ -112,9 +112,18 @@ require 'login_connect.php';
         <label for='email'> Email:</label>
         <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"><br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="myInput" value="">
+        <p>
+        <div id="parent">
+            <label id="parent" for="password">Password:</label>
+            <div id="popup">one number, one lowercase and one uppercase letter at least 6</div>
+            <input type="password" id="myInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" value="">
+        </div>
+        </p>
+
         <br><br>
+
+        <!-- at least one number, one lowercase and one uppercase letter
+         at least six characters that are letters, numbers or the underscore -->
 
         <label for="password">Confirm Password:</label>
         <input type="password" id="myInput2" value="" required><br>
